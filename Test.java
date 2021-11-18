@@ -10,4 +10,11 @@ public class Test {
         String result = valid.firstName("Amol");
         Assert.assertEquals(true, result);
     }
+}@Test
+public void lastName(){
+    UserValidation valid = new UserValidation();
+    String result = valid.lastName("nagose");
+    Assert.assertEquals(true, result);
+}
+
 }
