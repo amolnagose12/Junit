@@ -5,10 +5,10 @@ import org.junit.Test;
 
 public class UserRegistrationTest {
     @Test
-    public void checkValidName() {
+    public void checkValidPassword() {
         UserRegistration user = new UserRegistration();
-        boolean check = user.validName("Nagose");
-        Assert.assertSame(true, check);
+        boolean pass = user.passwordValidation("aaZZa44@");
+        Assert.assertTrue(pass);
     }
 
 }
