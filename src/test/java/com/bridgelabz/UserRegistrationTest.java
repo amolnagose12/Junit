@@ -7,8 +7,8 @@ public class UserRegistrationTest {
     @Test
     public void checkValidPassword() {
         UserRegistration user = new UserRegistration();
-        boolean pass = user.passwordValidation("aaZZa44@");
-        Assert.assertTrue(pass);
+        boolean pass = user.passwordValidation("aa♦a44@");
+        Assert.assertSame(true,pass);
     }
 
 }
