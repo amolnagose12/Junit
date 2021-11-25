@@ -7,7 +7,7 @@ public class UserRegistrationTest {
     @Test
     public void checkValidName() {
         UserRegistration user = new UserRegistration();
-        boolean check = user.email("abc.xyz@bl.co.in");
+        boolean check = user.firstName("Amol");
         Assert.assertSame(true, check);
     }
 

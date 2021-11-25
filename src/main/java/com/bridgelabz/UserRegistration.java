@@ -5,10 +5,10 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-    public static boolean email(String email) {
-        String pattern = "([a-z]{3,})(.)([a-z]*)[@][a-z]{2}(.)([a-z]{2})(.)([in]*)";
-        Pattern emailVal= Pattern.compile(pattern);
-        Matcher match = emailVal.matcher(email);
+    public static boolean firstName(String firstName) {
+        String pattern = "^[A-Z][a-z]{3,}";
+        Pattern firstN= Pattern.compile(pattern);
+        Matcher match = firstN.matcher(firstName);
         if (match.matches()) {
             return true;
         }
@@ -16,6 +16,6 @@ public class UserRegistration {
     }
 
     public static void main(String[] args) {
-        System.out.println(email("amolnagose12@gmail.com"));
+        System.out.println(firstName("Amol"));
     }
 }
