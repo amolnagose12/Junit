@@ -5,10 +5,10 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-    public static boolean firstName(String firstName) {
+    public static boolean validName(String lastName) {
         String pattern = "^[A-Z][a-z]{3,}";
         Pattern firstN= Pattern.compile(pattern);
-        Matcher match = firstN.matcher(firstName);
+        Matcher match = firstN.matcher(lastName);
         if (match.matches()) {
             return true;
         }
@@ -16,6 +16,6 @@ public class UserRegistration {
     }
 
     public static void main(String[] args) {
-        System.out.println(firstName("Amol"));
+        System.out.println(validName("Nagose"));
     }
 }
