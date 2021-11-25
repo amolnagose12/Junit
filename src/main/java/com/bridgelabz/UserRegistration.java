@@ -5,10 +5,10 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-    public static boolean passwordValidation(String password) {
-        String pattern ="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*d)(?=.*[@#$%^&-+=()]).{8,}$";
-        Pattern pass= Pattern.compile(pattern);
-        Matcher match = pass.matcher(password);
+    public static boolean passwordValidation(String email) {
+        String pattern ="([a-zA-Z0-9.-_]{3,})[a-zA-Z0-9.-_]*[@][a-zA-Z0-9.-_]*[a-zA-Z0-9.-_]{3,}[a-zA-Z0-9.-_]*";
+        Pattern pass = Pattern.compile(pattern);
+        Matcher match = pass.matcher(email);
         if (match.matches()) {
             return true;
         }
@@ -16,6 +16,6 @@ public class UserRegistration {
     }
 
     public static void main(String[] args) {
-        System.out.println(passwordValidation("aaaZ44@"));
+        System.out.println(passwordValidation("amolnagose12@gmail.com"));
     }
 }
